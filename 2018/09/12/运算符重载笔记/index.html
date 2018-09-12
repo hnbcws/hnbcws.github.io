@@ -15,16 +15,17 @@
 
 
 
-<meta name="description" content="壮志凌云几分愁知己难逢几人留">
-<meta property="og:type" content="website">
+<meta name="description" content="运算符重载  运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。     可重载的一元运算符:+,-,!,~,++,–,true,false可重载的二元运算符：+，-，*，/，%，&amp;amp;，|，^,&amp;lt">
+<meta property="og:type" content="article">
 <meta property="og:title" content="hnbcws">
-<meta property="og:url" content="http://yoursite.com/archives/2018/09/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/09/12/运算符重载笔记/index.html">
 <meta property="og:site_name" content="hnbcws">
-<meta property="og:description" content="壮志凌云几分愁知己难逢几人留">
+<meta property="og:description" content="运算符重载  运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。     可重载的一元运算符:+,-,!,~,++,–,true,false可重载的二元运算符：+，-，*，/，%，&amp;amp;，|，^,&amp;lt">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-29T07:31:31.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hnbcws">
-<meta name="twitter:description" content="壮志凌云几分愁知己难逢几人留">
+<meta name="twitter:description" content="运算符重载  运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。     可重载的一元运算符:+,-,!,~,++,–,true,false可重载的二元运算符：+，-，*，/，%，&amp;amp;，|，^,&amp;lt">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2018/9 | hnbcws</title>
+<title>hnbcws</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,8 +67,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -267,75 +268,154 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-运算符重载笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/09/12/运算符重载笔记/" class="archive-article-date">
-      <time datetime="2018-09-12T13:54:42.264Z" itemprop="datePublished">09-12</time>
+    <div class="article-meta">
+      <a href="/2018/09/12/运算符重载笔记/" class="article-date">
+      <time datetime="2018-09-12T13:54:42.264Z" itemprop="datePublished">2018-09-12</time>
 </a>
 
 
-        </div>
-         
-        <div class="article-info info-on-archive">
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <h1 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a><strong>运算符重载</strong></h1><ul>
+<li style="list-style: none"><input type="checkbox"> 运算符重载只能用于类和结构。  </li>
+<li style="list-style: none"><input type="checkbox"> 为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。  </li>
+<li style="list-style: none"><input type="checkbox"> 声明必须同时使用==static和public==的修饰符；  </li>
+<li style="list-style: none"><input type="checkbox"> 运算符必须是要操作的类或结构的成员。  </li>
+</ul>
+<hr>
+<p>可重载的一元运算符:+,-,!,~,++,–,true,false<br>可重载的二元运算符：+，-，*，/，%，&amp;，|，^,&lt;&lt;,&gt;&gt;,==,!=,&gt;,&lt;,&gt;=,&lt;=</p>
+<hr>
+<p><strong>总结</strong><br>运算符只能采用值参数，不能采用 ref 或 out 参数。  </p>
+<p>C# 要求成对重载比较运算符。如果重载了==，则也必须重载!=，否则产生编译错误。同时，比较运算符必须返回bool类型的值，这是与其他算术运算符的根本区别。  </p>
+<p>C# 不允许重载=运算符，但如果重载例如+运算符，编译器会自动使用+运算符的重载来执行+=运算符的操作。  </p>
+<p>运算符重载的其实就是函数重载。首先通过指定的运算表达式调用对应的运算符函数，然后再将运算对象转化为运算符函数的实参，接着根据实参的类型来确定需要调用的函数的重载，这个过程是由编译器完成。</p>
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/09/12/运算符重载笔记/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">hnbcws</a></p>
+        <p><span>发布时间:</span>2018-09-12, 21:54:42</p>
+        <p><span>最后更新:</span>2018-08-29, 15:31:31</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/12/运算符重载笔记/" title="">http://yoursite.com/2018/09/12/运算符重载笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/12/运算符重载笔记/　　作者: hnbcws" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/09/11/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/09/11/hello-world/" class="archive-article-date">
-      <time datetime="2018-09-11T06:59:02.255Z" itemprop="datePublished">09-11</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#运算符重载"><span class="toc-number">1.</span> <span class="toc-text">运算符重载</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/11/hello-world/">Hello World</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"　| hnbcws　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
+    
+</div>
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+
+
+
+
+
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/09/11/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/运算符重载笔记/">运算符重载笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
