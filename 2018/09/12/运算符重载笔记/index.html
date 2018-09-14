@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="运算符重载  运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。     可重载的一元运算符:+,-,!,~,++,–,true,false可重载的二元运算符：+，-，*，/，%，&amp;amp;，|，^,&amp;lt">
+<meta name="description" content="运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hnbcws">
+<meta property="og:title" content="运算符重载">
 <meta property="og:url" content="http://yoursite.com/2018/09/12/运算符重载笔记/index.html">
 <meta property="og:site_name" content="hnbcws">
-<meta property="og:description" content="运算符重载  运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。     可重载的一元运算符:+,-,!,~,++,–,true,false可重载的二元运算符：+，-，*，/，%，&amp;amp;，|，^,&amp;lt">
+<meta property="og:description" content="运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-29T07:31:31.768Z">
+<meta property="og:updated_time" content="2018-09-14T02:35:35.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hnbcws">
-<meta name="twitter:description" content="运算符重载  运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。     可重载的一元运算符:+,-,!,~,++,–,true,false可重载的二元运算符：+，-，*，/，%，&amp;amp;，|，^,&amp;lt">
+<meta name="twitter:title" content="运算符重载">
+<meta name="twitter:description" content="运算符重载只能用于类和结构。    为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。    声明必须同时使用==static和public==的修饰符；    运算符必须是要操作的类或结构的成员。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>hnbcws</title>
+<title>运算符重载 | hnbcws</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -169,11 +169,9 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/随笔">随笔</a></li>
-                        
                             <li><a href="/tags/">标签云</a></li>
                         
-                            <li><a href="/about/">关于我</a></li>
+                            <li><a href="/about/">留言板</a></li>
                         
                         </ul>
                     </nav>
@@ -223,11 +221,7 @@
             </div>
          
         </div>
-        <div id="music">
-
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=465531204&auto=0&height=66"></iframe>
-
-         </div>
+        
     </header>                
 </div>
     </div>
@@ -255,11 +249,9 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/随笔">随笔</a></li>
-                
                     <li><a href="/tags/">标签云</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
+                    <li><a href="/about/">留言板</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -283,7 +275,7 @@
   
     <div class="article-meta">
       <a href="/2018/09/12/运算符重载笔记/" class="article-date">
-      <time datetime="2018-09-12T13:54:42.264Z" itemprop="datePublished">2018-09-12</time>
+      <time datetime="2018-09-12T10:23:20.000Z" itemprop="datePublished">2018-09-12</time>
 </a>
 
 
@@ -294,16 +286,36 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      运算符重载
+    </h1>
+  
+
+        
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a><strong>运算符重载</strong></h1><ul>
+        <ul>
 <li style="list-style: none"><input type="checkbox"> 运算符重载只能用于类和结构。  </li>
 <li style="list-style: none"><input type="checkbox"> 为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。  </li>
 <li style="list-style: none"><input type="checkbox"> 声明必须同时使用==static和public==的修饰符；  </li>
 <li style="list-style: none"><input type="checkbox"> 运算符必须是要操作的类或结构的成员。  </li>
 </ul>
 <hr>
+<a id="more"></a>
 <p>可重载的一元运算符:+,-,!,~,++,–,true,false<br>可重载的二元运算符：+，-，*，/，%，&amp;，|，^,&lt;&lt;,&gt;&gt;,==,!=,&gt;,&lt;,&gt;=,&lt;=</p>
 <hr>
 <p><strong>总结</strong><br>运算符只能采用值参数，不能采用 ref 或 out 参数。  </p>
@@ -318,12 +330,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/12/运算符重载笔记/"></a></p>
+        <p><span>本文标题:</span><a href="/2018/09/12/运算符重载笔记/">运算符重载</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">hnbcws</a></p>
-        <p><span>发布时间:</span>2018-09-12, 21:54:42</p>
-        <p><span>最后更新:</span>2018-08-29, 15:31:31</p>
+        <p><span>发布时间:</span>2018-09-12, 18:23:20</p>
+        <p><span>最后更新:</span>2018-09-14, 10:35:35</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/12/运算符重载笔记/" title="">http://yoursite.com/2018/09/12/运算符重载笔记/</a>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/12/运算符重载笔记/" title="运算符重载">http://yoursite.com/2018/09/12/运算符重载笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/12/运算符重载笔记/　　作者: hnbcws" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -351,7 +363,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#运算符重载"><span class="toc-number">1.</span> <span class="toc-text">运算符重载</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -387,7 +399,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| hnbcws　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"运算符重载　| hnbcws　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -436,7 +448,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/运算符重载笔记/">运算符重载笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/运算符重载笔记/">运算符重载</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/11/hello-world/">Hello World</a></li></ul>
 
 
 

@@ -173,11 +173,9 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/随笔">随笔</a></li>
-                        
                             <li><a href="/tags/">标签云</a></li>
                         
-                            <li><a href="/about/">关于我</a></li>
+                            <li><a href="/about/">留言板</a></li>
                         
                         </ul>
                     </nav>
@@ -227,11 +225,7 @@
             </div>
          
         </div>
-        <div id="music">
-
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=465531204&auto=0&height=66"></iframe>
-
-         </div>
+        
     </header>                
 </div>
     </div>
@@ -259,11 +253,9 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/随笔">随笔</a></li>
-                
                     <li><a href="/tags/">标签云</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
+                    <li><a href="/about/">留言板</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -289,7 +281,7 @@
   
     <div class="article-meta">
       <a href="/2018/09/12/运算符重载笔记/" class="article-date">
-      <time datetime="2018-09-12T13:54:42.264Z" itemprop="datePublished">2018-09-12</time>
+      <time datetime="2018-09-12T10:23:20.000Z" itemprop="datePublished">2018-09-12</time>
 </a>
 
 
@@ -300,23 +292,29 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/12/运算符重载笔记/">运算符重载</a>
+    </h1>
+  
+
+        
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a><strong>运算符重载</strong></h1><ul>
+              <ul>
 <li style="list-style: none"><input type="checkbox"> 运算符重载只能用于类和结构。  </li>
 <li style="list-style: none"><input type="checkbox"> 为类或结构重载一个运算符x,可以声明一个名称为==operator x==的方法并实现它的行为。  </li>
 <li style="list-style: none"><input type="checkbox"> 声明必须同时使用==static和public==的修饰符；  </li>
 <li style="list-style: none"><input type="checkbox"> 运算符必须是要操作的类或结构的成员。  </li>
 </ul>
 <hr>
-<p>可重载的一元运算符:+,-,!,~,++,–,true,false<br>可重载的二元运算符：+，-，*，/，%，&amp;，|，^,&lt;&lt;,&gt;&gt;,==,!=,&gt;,&lt;,&gt;=,&lt;=</p>
-<hr>
-<p><strong>总结</strong><br>运算符只能采用值参数，不能采用 ref 或 out 参数。  </p>
-<p>C# 要求成对重载比较运算符。如果重载了==，则也必须重载!=，否则产生编译错误。同时，比较运算符必须返回bool类型的值，这是与其他算术运算符的根本区别。  </p>
-<p>C# 不允许重载=运算符，但如果重载例如+运算符，编译器会自动使用+运算符的重载来执行+=运算符的操作。  </p>
-<p>运算符重载的其实就是函数重载。首先通过指定的运算表达式调用对应的运算符函数，然后再将运算对象转化为运算符函数的实参，接着根据实参的类型来确定需要调用的函数的重载，这个过程是由编译器完成。</p>
-
+          
       
     </div>
     
@@ -325,6 +323,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a href="/2018/09/12/运算符重载笔记/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -365,6 +367,7 @@
     </h1>
   
 
+        
       </header>
       
     
